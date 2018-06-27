@@ -1,16 +1,16 @@
-import BookItem from "./BookItem.vue"
-
 <template>
   <div>
     <h1>
       {{title}}
     </h1>
     <ul>
-      <li v-for="book in books" :book="book">{{book.item}}</li>
+      <book-item v-for="book in books" :book="book"></book-item>
     </ul>
   </div>
 </template>
 <script >
+import BookItem from "./BookItem.vue"
+
 export default {
   name: "BookList",
 
@@ -22,7 +22,9 @@ export default {
         {title: 'American Gods', author: 'Neil Gaiman'},
         {title: 'Amusing Ourselves to Death', author: 'Neil Postman'},
       ],
-      components: BookItem
+      components: {
+        BookItem
+      }
     }
   }
 }
