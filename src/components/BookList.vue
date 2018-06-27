@@ -4,9 +4,9 @@
       {{title}}
     </h1>
     <ul>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>{{book.title}} - {{book.author}}</li>
+      <li>{{book.title}} - {{book.author}}</li>
+      <li>{{book.title}} - {{book.author}}</li>
     </ul>
   </div>
 </template>
@@ -33,6 +33,10 @@ export default {
   ul {
     list-style-type: none;
     padding: 0;
+  }
+  li {
+    display: block;
+    margin: 0 10px;
   }
 </style>
 
